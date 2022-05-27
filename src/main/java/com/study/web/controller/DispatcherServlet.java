@@ -52,9 +52,13 @@ public class DispatcherServlet extends HttpServlet {
 					HttpSession session = request.getSession();
 					session.setAttribute("user", user);
 
-					response.sendRedirect("/index.jsp");
+					RequestDispatcher dispatcher =
+							request.getRequestDispatcher("/getBoardList.do");
+					dispatcher.forward(request, response);
 				} else {
-					response.sendRedirect("/index.jsp");
+					RequestDispatcher dispatcher =
+							request.getRequestDispatcher("/loginView.do");
+					dispatcher.forward(request, response);
 				}
 			} else {
 				response.sendRedirect("/index.jsp");
@@ -177,7 +181,7 @@ public class DispatcherServlet extends HttpServlet {
 			dao.upCountBoard(board);
 			
 			request.setAttribute("board", board);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("getBoard.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/getBoard.jsp");
 			dispatcher.forward(request, response);
 			
 			}
@@ -212,9 +216,27 @@ public class DispatcherServlet extends HttpServlet {
 			List<BoardVO> boardList = dao.getBoardList(vo);
 			
 			request.setAttribute("boardList", boardList);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("getBoardList.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/board/getBoardList.jsp");
 			dispatcher.forward(request, response);
 			}
+			
+		} else if (path.equals("/insertUserView.do")) {
+			System.out.println("회원가입 화면 이동 처리되었습니다.");
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/WEB-INF/board/insertUser.jsp");
+				dispatcher.forward(request, response);
+
+		} else if (path.equals("/loginView.do")) {
+			System.out.println("로그인 화면 이동 처리되었습니다.");
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/WEB-INF/board/login.jsp");
+				dispatcher.forward(request, response);
+
+		} else if (path.equals("/insertBoardView.do")) {
+			System.out.println("글 등록 화면 이동 처리되었습니다.");
+			RequestDispatcher dispatcher = 
+					request.getRequestDispatcher("/WEB-INF/board/insertBoard.jsp");
+				dispatcher.forward(request, response);
 			
 			// 잘못된 접근 처리 기능
 		} else {
