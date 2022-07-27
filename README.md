@@ -1,6 +1,6 @@
 
 # My JSP Board
-
+ 
 - JAVA는 17, Tomcat은 v9.0을 이용했고, Dynamic web module은 v2.5를 사용했습니다.
 - JSP와 Servlet을 학습하면서 만든 게시판입니다.
 - [프로젝트 회고록](https://ddungi.github.io/project/2022/05/26/boardproject/)
