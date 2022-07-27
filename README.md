@@ -3,6 +3,7 @@
 
 - JAVA는 17, Tomcat은 v9.0을 이용했고, Dynamic web module은 v2.5를 사용했습니다.
 - JSP와 Servlet을 학습하면서 만든 게시판입니다.
+- [프로젝트 회록](https://github.com/ddungi/MyJSPBoard)
 - DB는 H2를 사용했습니다. 
 > - JDBC Util을 이용해 H2 DB와 연결하였습니다. 
 > - BoardDAO, UserDAO(Data Access Object)를 통해 데이터를 요청하고 응답하게 하였습니다.
@@ -25,7 +26,7 @@
 ![signin](https://user-images.githubusercontent.com/88040158/170431542-ec2c8f92-80f1-4768-a2d3-54bdea5c4c7f.png)
 
 - 회원가입 화면입니다.
-- 아이디, 비밀번호, 이름, 권한 (권리자만 글 삭제 가능)을 택할 수 있습니다.
+- 아이디, 비밀번호, 이름, 권한 (관리자만 글 삭제 가능)을 택할 수 있습니다.
 
 <br>
 
@@ -62,11 +63,11 @@
 
 ![adminboard](https://user-images.githubusercontent.com/88040158/170432535-834ec35e-c8b7-4bb8-8431-2f65d827019e.png)
 
-- 권리자가 본 다른 회원의 글은 글 수정은 불가하지만 글 삭제가 가능합니다.
+- 관리자가 본 다른 회원의 글은 글 수정은 불가하지만 글 삭제가 가능합니다.
 
 ![adminboard2](https://user-images.githubusercontent.com/88040158/170434629-2fe0f318-f6d3-4de6-9a78-16748ce332c6.png)
 
-- 권리자가 본 자신의 글은 글 수정과 글 삭제가 모두 가능합니다.
+- 관리자가 본 자신의 글은 글 수정과 글 삭제가 모두 가능합니다.
 
 <br>
 
