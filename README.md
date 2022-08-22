@@ -3,7 +3,6 @@
  
 - JAVA는 17, Tomcat은 v9.0을 이용했고, Dynamic web module은 v2.5를 사용했습니다.
 - JSP와 Servlet을 학습하면서 만든 게시판입니다.
-- [프로젝트 회고록](https://iheese.github.io/project/2022/05/26/boardproject/)
 - DB는 H2를 사용했습니다. 
 > - JDBC Util을 이용해 H2 DB와 연결하였습니다. 
 > - BoardDAO, UserDAO(Data Access Object)를 통해 데이터를 요청하고 응답하게 하였습니다.
@@ -11,6 +10,7 @@
 - JSP 내부에 EL(Expression Language) ,JSTL(JavaServer Pages Standard Tag Library)을 이용하였습니다.
 - BoardVO, UserVO에는 lombok을 이용하여 코드를 간결하게 줄였습니다.
 - Filter에 인코딩을 UTF-8로 이용해서 요청 처리의 한글이 깨지지 않게 했습니다. 
+- [프로젝트 회고록](https://iheese.github.io/project/2022/05/26/boardproject/)
 
 <br>
 
